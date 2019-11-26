@@ -1,10 +1,10 @@
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-import {selectCategory, fetchCategory} from '../actions'
+import {selectCategory, fetchCategories} from '../actions'
 class CategoryList extends Component {
 
     componentDidMount() {
-        this.props.fetchCategory();
+        this.props.fetchCategories();
     }
 
 
@@ -33,5 +33,5 @@ const mapStateToProps = (state) => {
     return {categories: state.categories};
 }
 export default connect(mapStateToProps, {
-    selectCategory, fetchCategory
+    selectCategory, fetchCategories
 })(CategoryList);

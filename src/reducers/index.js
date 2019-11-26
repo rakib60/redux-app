@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
+import { reducer as formReducer } from 'redux-form'
 import categoryReducer from './CategoryReducers'
-
 
 
 const selectedCategoryReducer = (selectedCategory=null, action) => {
@@ -13,5 +13,6 @@ const selectedCategoryReducer = (selectedCategory=null, action) => {
 
 export default combineReducers({
     categories: categoryReducer,
+    form: formReducer,
     selectedCategory: selectedCategoryReducer
 })
