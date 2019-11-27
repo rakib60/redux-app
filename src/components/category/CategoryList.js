@@ -16,9 +16,9 @@ class CategoryList extends Component {
                         {category.name}
                     </div>
                     <div>
-                        <button>
+                        <Link to={`/category/edit/${category.id}`} className="btn btn-primary">
                             EDIT
-                        </button>
+                        </Link>
                         <button>
                             DELETE
                         </button>

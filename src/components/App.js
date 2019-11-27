@@ -1,5 +1,6 @@
 import React from 'react'
 import { Router, Route } from 'react-router-dom'
+
 //Todo: 
 // import Header from '../components/Header' Todo:
 import CategoryCreate  from '../components/category/CategoryCreate'
@@ -18,7 +19,7 @@ const App = () => {
                 {/* <Header/> Todo: */} 
                <Route path="/" exact component={CategoryList} />
                 <Route path="/category/new" component={CategoryCreate} />
-                <Route path="/category/edit" component={CategoryEdit} />
+                <Route path="/category/edit/:id" component={CategoryEdit} />
                 <Route path="/category/delete" component={CategoryDelete} />
                 <Route path="/category/show" component={CategoryShow} />
                </div>

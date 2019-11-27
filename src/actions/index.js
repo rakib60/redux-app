@@ -42,6 +42,7 @@ export const editCategory = (id, formValues) => async dispatch => {
     const response = await stockApi.patch(`/categories/${id}`, formValues);
 
     dispatch({ type: EDIT_CATEGORY, payload: response.data})
+    history.push('/')
 }
 
 export const deleteCategory = (id) => async dispatch => {
